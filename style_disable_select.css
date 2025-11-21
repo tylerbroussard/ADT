@@ -1,0 +1,11 @@
+#comboboxButton_newCallCampaigns:has(#comboboxButtonText_newCallCampaigns[aria-label="Outbound"]) {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+button[aria-activedescendant=""][data-dropdown="#comboboxDropdown_newCallCampaigns"]:has(span[aria-label="Outbound"]) {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
