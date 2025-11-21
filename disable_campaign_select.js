@@ -5,9 +5,11 @@ function updateButtonState() {
   if (buttonText && buttonText.textContent.trim() === 'Outbound') {
     button.disabled = true;
     button.setAttribute('aria-disabled', 'true');
+    console.log('Button disabled');
   } else {
     button.disabled = false;
     button.setAttribute('aria-disabled', 'false');
+    console.log('Button enabled');
   }
 }
 
