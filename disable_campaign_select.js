@@ -15,4 +15,3 @@ updateButtonState();
 
 const observer = new MutationObserver(updateButtonState);
 observer.observe(buttonText, { childList: true, characterData: true, subtree: true });
-observer.observe(buttonText, { childList: true, characterData: true, subtree: true });
