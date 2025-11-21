@@ -1,16 +1,8 @@
 const button = document.getElementById('comboboxButton_newCallCampaigns');
 const buttonText = document.getElementById('comboboxButtonText_newCallCampaigns');
 
-if (buttonText && buttonText.textContent.trim() === 'Outbound') {
-  button.disabled = true;
-  button.setAttribute('aria-disabled', 'true');
-}
-
-const button = document.getElementById('comboboxButton_newCallCampaigns');
-const buttonText = document.getElementById('comboboxButtonText_newCallCampaigns');
-
 function updateButtonState() {
-  if (buttonText.textContent.trim() === 'Outbound') {
+  if (buttonText && buttonText.textContent.trim() === 'Outbound') {
     button.disabled = true;
     button.setAttribute('aria-disabled', 'true');
   } else {
@@ -22,4 +14,5 @@ function updateButtonState() {
 updateButtonState();
 
 const observer = new MutationObserver(updateButtonState);
+observer.observe(buttonText, { childList: true, characterData: true, subtree: true });
 observer.observe(buttonText, { childList: true, characterData: true, subtree: true });
